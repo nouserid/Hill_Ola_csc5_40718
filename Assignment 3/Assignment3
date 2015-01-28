@@ -1,0 +1,370 @@
+/* 
+ * File:   main.cpp
+ * Author: Ola Hill
+ * Gaddis chapter 4
+ * Class # 40718
+ *
+ * Created on January 20, 2015, 8:43 PM
+ */
+
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+ int main() 
+
+{
+ // Problem # 1
+ // Minimum/maximum
+    
+
+    double numOne, numTwo;
+    
+    cout << " Enter a number " << endl;
+    cin >> numOne;
+    cout << "Enter another number " << endl;
+    cin>>numTwo;
+    
+    if ( numOne > numTwo)
+        cout << " The first number entered is greater than the second number entered " << endl;
+     if ( numOne < numTwo)
+         cout << " The first number entered is less than the second number entered" << endl;
+    
+    
+  
+    
+   // problem # 2
+    // Roman Numeral Converter
+    // using a switch statement
+    
+    
+    int n;
+    
+    
+    cout << " Enter a number between 1 and 10" << endl;
+    cin >> n;
+    
+    if (n < 1|| n > 10)
+    
+    
+    cout << "Enter a number " << endl;
+    cin >> n;
+    
+    switch (n)
+    
+    {
+        case 1: cout << "I" << endl;
+           break;
+        case 2: cout << "II" << endl;
+           break;
+        case 3: cout << "III" << endl;
+            break;
+        case 4: cout << "IV" << endl;
+             break;
+        case 5: cout << "V" << endl;
+              break;
+        case 6: cout << "VI" << endl;
+              break;
+        case 7: cout << "VII" << endl;
+               break;
+        case 8: cout << "VIII" << endl;
+              break;
+        case 9: cout << "VIIII" << endl;
+               break;
+        case 10: cout << "X" << endl;
+              break;
+              
+    } 
+     
+ 
+    
+  
+      
+    
+    
+    // problem # 3
+    // Magic dates
+    
+    
+     int month,day,year,d;
+     
+      cout << "Enter a month" << endl;
+      cin >> month;
+      cout << " Enter a day" << endl;
+      cin >> day;
+      cout << " Enter two digits for the year" << endl;
+      cin >> year;
+      
+        d = month*day;
+        
+        if (d == year)
+            
+        {
+            cout << "Date is magic" << endl;     
+        }
+        else
+            
+          cout << "Date is not magic" << endl;
+        
+        
+        // problem # 4
+        // Areas of a rectangle
+        
+        float lOne,lTwo,wOne,wTwo,aOne,aTwo;
+        
+        cout << "Enter the length of the first rectangle" << endl;
+        cin >> lOne;
+        cout << "Enter the width of the first rectangle" << endl;
+        cin >> wOne;
+        
+        // first rectangle
+        
+        aOne = lOne*wOne;
+        cout << "The area of the first rectangle is" << aOne << endl;
+        
+        cout << "Enter the length of the second rectangle" << endl;
+        cin >> lTwo;
+        cout << "Enter the width of the second rectangle" << endl;
+        cin >> wTwo;
+        
+        // second rectangle
+        
+        aTwo = wOne*wTwo;
+        cout << "The area of the second rectangle is " << aTwo << endl;
+        
+        if(aOne==aTwo)
+            
+        {
+            cout << "Two areas are equal" << endl;
+        }  
+            else
+                   
+        if(aOne > aTwo)
+             
+         {   
+             cout << "First rectangle area is to large" << endl;
+         }
+         else
+             
+         { 
+            cout << "Second rectangle area it to large" << endl;
+            
+         }
+        
+        
+        // problem #8
+        // Change for a dollar
+        
+        const double penniesValue = 0.1, nickelsValue = 0.5;
+        const double dimesValue = 0.10, quarterValue = 0.25;
+        const double dollarValue = 1.00;
+        
+        double pennies, nickels, dimes, quarters,dollar;
+        double totalAmount;
+        double penniesCost,nickelsCost,dimesCost,quarterCost;
+        double dollarCost;
+        
+        cout << "Enter the number of pennies" << endl;
+        cin >> pennies;
+        
+        cout << "Enter the number of nickels" << endl;
+        cin >> nickels;
+        
+        cout << "Enter number of dimes" << endl;
+        cin >> dimes;
+        
+        cout << "\nEnter number of quarters" << endl;
+        cin >> quarters;
+        
+        penniesCost=penniesValue*pennies;
+        nickelsCost=nickelsValue*nickels;
+        dimesCost=dimesValue*dimes;
+        quartersCost=quartersValue*quarters;
+        
+        totalAmount=penniesCost+nickelsCost+dimesCost+quartersCost;
+        
+        if(totalAmount==dollar)
+        {
+            cout << "Congratulations you won the game and the total amount is = <<totalAmount" << endl;
+        
+        }
+        
+        else 
+        // I couldn't figure out how to to do the rest of "#8
+        
+        // problem #6
+        // Mass and weight
+        
+        
+        double mass,weight;
+         
+        cout << "Enter an object mass" << endl;
+        cin >> mass;
+        weight=(mass*9.8)
+                
+           cout<< "The object weight is " << weight << " newtons" << endl;
+        
+        if(weight > 1000)
+            cout << "It's too heavy" << endl;
+        if (weight < 10)
+            cout << "It's too light" << endl;
+        
+        
+        // problem #14
+        //  Running a race
+        
+        char runnerOne,runnerTwo,runnerThree;
+        int timeOne,timeTwo,timeThree;
+        
+        cout << "Enter runner name" << endl;
+        cin >> runnerOne;
+        cout << "Enter time it took to finish race" << endl;
+       
+        if (time 1<0)
+        {    
+            cout << "Enter positive time" << endl;
+        cin >> timeOne;
+      
+        }
+        
+        cout << " Enter runner name" << endl;
+        runnerTwo;
+        cout << "Enter time it took to finish race" << endl;
+        if (time 2<0)
+        {
+            cout << "Enter positive time" << endl;
+            cin >> timeTwo;
+           
+        }
+        
+        cout << "Enter runner name" << endl;
+        runnerThree;
+        cout << "Enter time it took to finish race" << endl;
+        cin >> timeThree;
+                
+        if (time 3<0)
+            
+        { 
+            
+            cout << " Enter positive time" << endl;
+            cin >> timeThree;
+        }  
+        
+        if (timeOne<timeTwo)
+        {
+            if (timeTwo<timeThree)
+            {
+        cout << "First" << runnerOne  <<"Second" << runnerTwo << "Third" << runnerThree << endl;
+            }
+        else
+            cout << "First"<< runnerThree << "Second" << runnerTwo << "Third" << runnerOne << endl;
+        } else 
+            
+        {
+            if (timeTwo<timeThree)
+    
+            
+        
+    cout << "First" << runnerTwo << "Second" << runnerOne << "Third" << runnerThree<< endl; 
+    
+        else
+            cout << "First" << runnerThree << "Second" << runnerTwo << "Third" << runnerOne << endl;
+        }
+        
+        // problem # 15
+        // Personal Best
+        
+        char vaulterName;
+        char dateOne,dateTwo,dateThree;
+        double heightOne,heightTwo,heightThree;
+        
+        cout << " Enter vaulter's name" << endl;
+        cin >> vaulterName;
+        
+        cout << "Date of first pole vault attempt" >> endl;
+        cin >>dateOne;
+        cout << "Height of first pole vault attempt " << "meters" endl;
+        cin >> heightOne;
+        cout << "Date of second pole vault attempt"  <<endl;
+        cin >> dateTwo;
+        cout << " Height of second pole vault attempt" << "meters" << endl;
+        cin >> heightTwo;
+        cout << "Date of third pole vault attempt" << endl;
+        cin >> dateThree;
+        cout << "Height of third pole vault event" << "meters" endl;
+        cin >> heightThree;
+        
+        if (heightOne > heightTwo)
+        {
+            if (heightTwo > heightThree)
+            { 
+                cout << "First" << endl;
+               
+            }
+            if (heightOne > heightThree)
+            {  
+                 cout << "First" << endl;
+             
+                 
+             {   
+                     
+             
+     // problem # 5
+     // Body mass index
+                     
+       
+       double       w,h,BMI;
+               
+       
+       cout << "Enter the weight of body in pounds" << endl;
+       cin >> w;
+       cout << "Enter the height of body in inches" << endl;
+       cin >> h;
+       
+       BMI = (w*703)/ (h*h);
+       
+       cout << "The body mass index is " << BMI << endl;
+       if (BMI>=18.5 && BMI<=25)
+       {
+           cout << "Optimal weight" << endl;
+           
+       }
+            if (BMI<18.5)
+            {
+           cout << "Under weight" << endl;
+            }
+          
+              else  
+                  
+           cout << "Overweight " << endl;
+     }         
+        
+        
+        return 0;
+                
+}          
+            
+        
+        
+       
+        
+        
+            
+         
+        
+ 
+        
+        
+        
+ 
+    
+    
+        
+      
+        
+        
+     
+
+
+
