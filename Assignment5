@@ -1,0 +1,273 @@
+/* 
+ * File:   main.cpp
+ * Author: Ola Hill
+ * Assignment 5
+ * Section # 40718
+ * Created on January 27, 2015, 8:58 AM
+ */
+
+#include <iostream>
+#include <iomanip>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+
+int main(int argc,char** argv){
+
+
+// Problem #1
+// Markup
+
+{
+    double calculateRetail (double cost,double percentage);
+    
+    double wCost,retail,mPercentage;
+    
+    cout << "Enter wholesale cost:" << endl;
+    cin >> wCost;
+    
+    cout << "Enter marked percentage:" << endl;
+    cin >> mPercentage;
+    
+    retail=calculateRetail(wCost,mPercentage);
+    cout <<"Retail cost of item is:" << retail << endl;
+    
+        
+        double calculateRetail (double cost, double percentage);
+        
+        {
+            double retail;
+            retail=cost+((cost*percentage)/100);
+            return retail;
+        }
+            
+          
+         // Problem # 5
+         // Falling Distance
+         
+         double fallingDistance (int);
+         double distance;
+         int time;
+         
+         for(time=1; time<=10; time++)
+         {
+             distance=fallingDistance(time);
+             cout << "Distance at time interval" << time<< "in meters is: " << distance << endl;
+         }
+     }
+     double fallingDistance(int time)
+     {
+         double distance,g=9.8;
+         distance=static_cast<double>(0.5*g*time*time);
+         return distance;
+     }
+     
+     // I think problem # 5 is the best to run
+     
+     // Problem #6
+     // Kinetic Energy
+     
+     double kineticEnergy(double,double);
+     
+         double mass, velocity,kE;
+         cout << "Enter mass of body:";
+         cin>>mass;
+         
+         cout << "Enter velocity:";
+         cin>>velocity;
+         
+         kE=kineticEnergy(mass,velocity);
+         cout << "Kinetic Energy:" << kE << endl;
+     
+     
+     double kinteicEnergy (double mass, double velocity)
+     {
+         double kE;
+         kE=(0.5*mass*velocity*velocity);
+         return kE;
+     }
+     
+     // Problem # 7
+     // Celsius Temperature Table
+    
+     double celsius (double);
+     
+     
+         f=0,c;
+         cout <<"---------------------" << endl;
+         cout << "Farenheit\t Celsius" << endl;
+         cout <<"---------------------" << endl;
+         
+         for(int i=0;i<=20;i++);
+         
+             c =celsius (f);
+             cout <<f<<"\t\t" << c << endl;
+                    f++
+         
+
+     
+     double celsius (double f)
+     {
+         double temp;
+         temp = ((5.0/9.0)*(f-32));
+         return temp;
+     }
+     
+     
+     // Problem # 8
+     // Coin Toss
+     
+     
+     
+         int number;
+         cout << "Enter the number of tosses;";
+         cin >> number;
+         
+         for (int i=0;i<number;i++)
+         {
+             coinToss();
+         }
+         
+         void coinToss()
+         {
+             int num;
+             num=1+rand()%2;
+             if(num==1)
+                 cout << "Heads" << endl;
+             else
+                 cout << "Tails" << endl;
+         }
+         
+         
+         // Problem # 16
+         // Transient Population
+         
+         double proj(double P,double BP,double DP,double in,double out)
+         {
+             double N;
+             N= P + in + BP - DP - out;
+             return N;
+             
+         }
+         
+         double staring,bp,dp,come,go,year,projected,total=0;
+         cout << "Enter the starting size of the population:" << endl;
+         cin >> starting;
+         
+         while (starting < 2)
+         {
+             count << "ERROR: Reenter:" << endl;
+             cin >> starting;
+                     
+         }
+         cout << "Enter the annual birth rate;" << endl;
+         cin >> bp
+         while (bp<0)
+         {
+             cout "ERROR; Reenter:" << endl;
+                  cin >> bp;
+         }
+         cout << "Enter the annual death rate:" << endl;
+         cin >> dp;
+         while (dp<0)
+         {
+             cout <<"ERROR: Reenter:" << endl;
+             cin >> dp;
+         }
+         cout << "Enter the number of people which move into area each year:" << endl;
+         cin >> come;
+         cout << "Enter the number of people which move out from are each year:" << endl;
+         cin >> go;
+         cout <<  "Enter the number of years to display:" << endl;
+         cin >> year;
+         while (year <1)
+         {
+             cout <<"ERROR: Reenter:" << endl;
+             cin >> year;
+         }
+         cout << "The starting population is " << starting << endl;
+         for (int x=1;x<=year;x++)
+         { 
+             projected = proj(starting,bp,dp,come,go);
+             total = total + projected;
+             cout << "The projected population on  year " << x << "is" << total << endl;
+         }
+         }
+         
+         // Problem # 19
+         // Stock Profit
+         
+         double stockProfit(double,double,double,double,double);
+         
+         
+             double nS,pP,pC,sC,sP,profit;
+             
+             cout << "Enter number of shares;" << endl;
+             cin >> nS;
+             cout << "Enter purchase price for each share;" << endl;
+             cin >> pP;
+             cout << " Enter purchase commision;" << endl;
+             cin >> pC;
+             cout << "Enter sale price per share" << endl;
+             cin >> sP;
+             cout << "Enter sale commision" << endl;
+             cin >> sC;
+             
+             profit = stockProfit (nS,pP,pC,sC,sP);
+             
+             if (profit<0)
+                 cout << "Loss on sale of stock is:" << (profit) << endl;
+             else
+                 cout << "Profit on sale of stock is:" << profit << endl;
+             }
+             
+             double stockProfit (double nS,double pP,double pC,double sC,double sP)
+             
+             {
+                 double profit;
+                 profit = ((nS*sP)-sC)-((nS*pP) + pC);
+                 return profit;
+         
+         // Problem # 21
+         // isPrime Function
+         
+         bool isPrime(int);
+         
+         {
+             int number;
+             cout << "Enter number:" << endl;
+             cin >> number;
+             
+             if(isPrime(number))
+                 cout << "Prime number:" << endl;
+             else
+                 cout << "Not prime number" << endl;
+         }
+         
+   bool isPrime (int num)
+    { 
+         int count = 0;
+         for (int i=2;i<num/2;i++)
+         {
+             if (num%i==0)
+                 count++;
+         }
+         if(count>0)
+             return false;
+         else 
+             return true;
+         
+         
+         }
+                 
+            
+         
+     
+         
+         
+             
+      
+
+
